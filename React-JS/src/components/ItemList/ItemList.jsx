@@ -11,7 +11,7 @@ export const ItemList = ({lista}) => {
                 lista.map((prod) => (
                     <Item 
                         key={prod.id} 
-                        item={prod}>
+                        {...prod}>
                         <Boton color="green" texto="Ver producto" />
                     </Item>
                 ))
