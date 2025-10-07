@@ -1,21 +1,21 @@
 import { Item } from '../Item/Item'
-import Boton from '../Boton'
+import { Link } from 'react-router-dom'
+import './ItemList.css'
 
 export const ItemList = ({lista}) => {
     
-    //revisar boton
     
     return (
-        <>
+        <div className="ItemList">
             {lista.length ? 
                 lista.map((prod) => (
-                    <Item 
-                        key={prod.id} 
-                        {...prod}>
-                        <Boton color="green" texto="Ver producto" />
-                    </Item>
+                    <Link key={prod.id} to={`/detail/${prod.id}`}>
+                        <Item 
+                            {...prod}>
+                        </Item>
+                    </Link>
                 ))
             : <p>No hay productos</p>}  
-        </>
+        </div>
     )
 }

@@ -3,25 +3,25 @@
       "id": "1",
       "name": "Budín de Limón",
       "price": 2500,
-      "category": "Panadería",
+      "category": "Dulce",
       "description": "Budín casero de limón, húmedo y esponjoso.",
       "imagesUrl": "/images/budin-limon.jpg"
     },
     {
       "id": "2",
-      "name": "Medialunas de Manteca",
+      "name": "Croissant",
       "price": 1800,
-      "category": "Panadería",
-      "description": "Medialunas de manteca recién horneadas.",
-      "imagesUrl": "/images/medialunas.jpg"
+      "category": "Dulce",
+      "description": "Croissant recién horneadas.",
+      "imagesUrl": "/images/croissant.jpg"
     },
     {
       "id": "3",
-      "name": "Tarta de Frutilla",
+      "name": "Pan de masa madre",
       "price": 3200,
-      "category": "Pastelería",
-      "description": "Tarta fresca con crema pastelera y frutillas naturales.",
-      "imagesUrl": "/images/tarta-frutilla.jpg"
+      "category": "Salado",
+      "description": "Pan de masa madre recién horneado.",
+      "imagesUrl": "/images/pan-masa-madre.jpg"
     }
   ]
   
