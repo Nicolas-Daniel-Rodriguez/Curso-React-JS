@@ -4,12 +4,14 @@ import { Footer } from './components/Footer/Footer'
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer'
 import { ItemDetailContainer } from './components/ItemDetailConteiner/ItemDetailContainer'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { CartProvider } from './context/CartContext/CartProvider'
 
 export default function App() {
 
   return (
     <>
       <BrowserRouter>
+        <CartProvider>
         <Header />
         <Routes>  
           <Route path="/" element={<ItemListContainer 
@@ -19,6 +21,7 @@ export default function App() {
           <Route path="/category/:category" element={<ItemListContainer />}/>
         </Routes>
         <Footer />
+        </CartProvider>
       </BrowserRouter>
     </>
   )
