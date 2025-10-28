@@ -13,3 +13,8 @@ If you are developing a production application, we recommend using TypeScript wi
 
 
 preentrega: entregar github y netlify
+
+api imgbb c926537f0652952f937ac6b3fd5eb05b
+
+API endpoint
+https://6900bba7ff8d792314bb32e9.mockapi.io/:endpoint

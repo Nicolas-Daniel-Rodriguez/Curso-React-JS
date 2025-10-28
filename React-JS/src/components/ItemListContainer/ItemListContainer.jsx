@@ -1,11 +1,13 @@
 
 import { ItemList } from '../ItemList/ItemList'
 import { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 
 export const ItemListContainer = ({ titulo }) => {
     //Estados
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
+    const {category} = useParams();
 
     //Llamadas a una api
     useEffect(() => {
@@ -17,7 +19,11 @@ export const ItemListContainer = ({ titulo }) => {
                 return res.json();
             })
             .then((data) => {
-                setProducts(data);
+                if(category) {
+                    setProducts(data.filter((prod) => prod.category === category));
+                } else {
+                    setProducts(data);
+                }
             })
             .catch((error) => {
                 console.log(error);
@@ -25,7 +31,7 @@ export const ItemListContainer = ({ titulo }) => {
             .finally(() => {
                 setLoading(false); 
             });
-    }, []);
+    }, [category]);
 
     return (
         <div>

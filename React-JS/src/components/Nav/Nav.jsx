@@ -6,25 +6,19 @@ export const Nav = () => {
     const { getTotalItems } = useCartContext();
 
 
-    return (
-        <nav>
-            <ul>
-                <li> 
-                    <NavItem to="/">Home</NavItem>
-                </li>
-                <li> 
-                    <NavItem to="/category/salado">Salado</NavItem>
-                </li>
-                <li> 
-                    <NavItem to="/category/dulce">Dulce</NavItem>
-                </li>
-                <li> 
-                    <NavItem to="/carrito">Carrito</NavItem>
-                    {getTotalItems() > 0 && (
-                    <span className="in-cart">{getTotalItems()}</span>
-                    )}
-                </li>
-            </ul>
-        </nav>
-    )
-}
+     return (
+    <nav>
+      <ul>
+        <NavItem to="/">Home</NavItem>
+        <NavItem to="/category/salado">Salado</NavItem>
+        <NavItem to="/category/dulce">Dulce</NavItem>
+        <NavItem to="/carrito">
+          Carrito
+          {getTotalItems() > 0 && (
+            <span className="in-cart">{getTotalItems()}</span>
+          )}
+        </NavItem>
+      </ul>
+    </nav>
+  );
+};

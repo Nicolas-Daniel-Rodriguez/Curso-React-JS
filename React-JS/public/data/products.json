@@ -3,7 +3,7 @@
       "id": "1",
       "name": "Budín de Limón",
       "price": 2500,
-      "category": "Dulce",
+      "category": "dulce",
       "description": "Budín casero de limón, húmedo y esponjoso.",
       "imagesUrl": "/images/budin-limon.jpg"
     },
@@ -11,7 +11,7 @@
       "id": "2",
       "name": "Croissant",
       "price": 1800,
-      "category": "Dulce",
+      "category": "dulce",
       "description": "Croissant recién horneadas.",
       "imagesUrl": "/images/croissant.jpg"
     },
@@ -19,7 +19,7 @@
       "id": "3",
       "name": "Pan de masa madre",
       "price": 3200,
-      "category": "Salado",
+      "category": "salado",
       "description": "Pan de masa madre recién horneado.",
       "imagesUrl": "/images/pan-masa-madre.jpg"
     }
