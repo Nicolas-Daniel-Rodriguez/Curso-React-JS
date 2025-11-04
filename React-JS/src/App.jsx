@@ -6,6 +6,7 @@ import { ItemDetailContainer } from './components/ItemDetailConteiner/ItemDetail
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { CartProvider } from './context/CartContext/CartProvider'
 import { Cart } from './components/Cart/Cart'
+import { ProductFormContainer } from './components/adminComponents/ProductFormContainer/ProductFormContainer'
 
 export default function App() {
 
@@ -23,6 +24,7 @@ export default function App() {
         />} />
           <Route path="/detail/:id" element={<ItemDetailContainer />}/>
           <Route path="/carrito" element={<Cart />}/>
+          <Route path="/admin" element={<ProductFormContainer />}/>
         </Routes>
         <Footer />
         </CartProvider>
