@@ -1,11 +1,76 @@
 .product-form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+    gap: 1.2rem;
     max-width: 500px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #3b3b3b5d;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-form h2 {
+    margin: 0 0 0.5rem 0;
+    color: #ffffff;
+    font-size: 1.8rem;
+}
+
+.product-form > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.product-form label {
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+.product-form input,
+.product-form textarea {
+    padding: 0.75rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.product-form input:focus,
+.product-form textarea:focus {
+    outline: none;
+    border-color: #4a90e2;
+}
+
+.product-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.product-form button {
+    padding: 0.875rem 1.5rem;
+    background: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.product-form button:hover:not(:disabled) {
+    background: #357abd;
+}
+
+.product-form button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.product-form .error {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin: 0;
 }

@@ -26,7 +26,7 @@ const handleSubmit = async (e) => {
     setErrors({});
     setLoading(true);
 
-    const newErrors = validateProducts(...product, file);
+    const newErrors = validateProducts({ ...product, file });
     if (Object.keys(newErrors).length > 0) {
         setErrors(newErrors);
         setLoading(false);
@@ -34,10 +34,10 @@ const handleSubmit = async (e) => {
     }
 
     try {
-        const imageUrl = await uploadToImgbb();
+        const imageUrl = await uploadToImgbb(file);
         const productData = { 
             ...product, 
-            price: Number(productprice), 
+            price: Number(product.price), 
             imageUrl 
         };
 
