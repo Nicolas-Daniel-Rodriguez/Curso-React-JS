@@ -1,6 +1,8 @@
 import { useState } from "react"
 import { useAuthContext } from "../../context/AuthContext/useAuthContext"
 import { useNavigate, Navigate } from "react-router-dom"
+import "./Login.css"
+import Boton from "../Boton"
 
 export const Login = () => {
     const [userForm, setUserForm] = useState({
@@ -21,7 +23,7 @@ export const Login = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        const succecs =login(userForm.name, userForm.password)
+        const succecs = login(userForm.name, userForm.password)
         if (succecs) {
             navigate("/admin/alta-productos")
         } else {
@@ -35,7 +37,11 @@ export const Login = () => {
             <h1>Iniciar sesión</h1>
             <input type="text" name="name" value={userForm.name} onChange={handleChange} placeholder="Nombre de usuario" />
             <input type="password" name="password" value={userForm.password} onChange={handleChange} placeholder="Contraseña" />
-            <button type="submit">Iniciar sesión</button>
+            <Boton 
+                color="#4a90e2" 
+                texto="Iniciar sesión" 
+                onClick={handleSubmit}
+            />
         </form>
     )
 }

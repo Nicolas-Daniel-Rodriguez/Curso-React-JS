@@ -18,7 +18,7 @@ export const createProduct = async (product) => {
 }
 
 export const getProducts = async (category) => {
-    let url = BASE_URL;
+    let url = BASE_URL+"/products";
     if (category) {
         url += `?category=${category}`;
     }

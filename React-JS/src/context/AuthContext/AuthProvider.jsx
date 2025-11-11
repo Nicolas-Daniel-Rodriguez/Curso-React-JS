@@ -10,7 +10,7 @@ export const AuthProvider = ({ children }) => {
         return null
     })
 
-    const login = () => {
+    const login = (name, password) => {
         if (name === "admin" && password === "1234") {
             const session = { name };
             setUser(session);

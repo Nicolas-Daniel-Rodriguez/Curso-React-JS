@@ -20,22 +20,15 @@ export const Cart = () => {
                 <p>El carrito está vacío.</p>
             )}
 
-            {cart.length ? <div>
-                <div>
-                    <p>Total a pagar: ${total()}</p>
+            {cart.length ? (
+                <div className="cart-container">
+                        <p>Total a pagar: ${total()}</p>
+                        <Boton color="green" texto="Comprar" onClick={checkout}/>
+                        <Boton color="red" texto="Vaciar Carrito" onClick={clearCart} />
                 </div>
-                <div>
-                    <p> finalizar compra</p>
-                    <Boton color="green" texto="Comprar" onClick={checkout}/>
-                </div>
-                <div>
-                    <p>vaciar carrito</p>
-                    <Boton color="red" texto="Vaciar Carrito" onClick={clearCart} />
-                </div>
-                : (
-                    <Link to="/">Volver al inicio</Link>
-                )
-            </div> : null}
+            ) : (
+                <Link to="/">Volver al inicio</Link>
+            )}
     </section>
     );
 }

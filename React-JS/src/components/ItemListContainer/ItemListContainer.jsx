@@ -13,12 +13,16 @@ export const ItemListContainer = ({ titulo }) => {
 
     //Llamadas a una api
     useEffect(() => {
+        setLoading(true);
         getProducts(category)
             .then((data) => {
                 setProducts(data);
             })
             .catch((error) => {
-                console.log(error);
+                console.error('Error al cargar los productos:', error);
+            })
+            .finally(() => {
+                setLoading(false);
             });
     }, [category]);
 
