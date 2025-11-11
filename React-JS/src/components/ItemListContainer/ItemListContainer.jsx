@@ -2,6 +2,8 @@
 import { ItemList } from '../ItemList/ItemList'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { getProducts } from '../../services/products'
+
 
 export const ItemListContainer = ({ titulo }) => {
     //Estados
@@ -11,25 +13,12 @@ export const ItemListContainer = ({ titulo }) => {
 
     //Llamadas a una api
     useEffect(() => {
-        fetch('/data/products.json')
-            .then((res) => {
-                setLoading(true)
-                if(!res.ok) 
-                    throw new Error('Error al cargar los productos')
-                return res.json();
-            })
+        getProducts(category)
             .then((data) => {
-                if(category) {
-                    setProducts(data.filter((prod) => prod.category === category));
-                } else {
-                    setProducts(data);
-                }
+                setProducts(data);
             })
             .catch((error) => {
                 console.log(error);
-            })
-            .finally(() => {
-                setLoading(false); 
             });
     }, [category]);
 
